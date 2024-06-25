@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
   def create
     @blog = user.blogs.build(user_id:user.id)
     if @blog.create
-      redirect_to new_blog_path
+      redirect_to blogs_path
     else
       render :new
     end
